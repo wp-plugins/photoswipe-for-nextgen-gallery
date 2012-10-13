@@ -22,16 +22,13 @@ Please note, I am not the developer, or related in any way with of the authors o
 
 The plugin is ready to be used with zero configuration, but to make testing easier, there are 3 configuration options:
 
-* *Replace viewer with Photoswipe only on mobile browsers*
-
+* *Replace viewer with Photoswipe only on mobile browsers:*
 This is the default behavior, and will replace the NextGEN Gallery Effect with Photoswipe only when a mobile browser is detected. 
 
-* *Always replace viewer with Photoswipe*
-
+* *Always replace viewer with Photoswipe:*
 Useful for testing.
 
-* *Never replace the viewer*
-
+* *Never replace the viewer:*
 Disables the plugin. Much like deactivating the plugin.
 
 == Installation ==
@@ -60,9 +57,9 @@ If you want to be sure, check your "Gallery" menu. A new Photoswipe section shou
 
 The javascript added when a mobile browser is detected does two things:
 
-a) Fire the Photoswipe viewer when you click on a image
+* a) Fire the Photoswipe viewer when you click on a image
 
-b) Remove the default additional HTML markup added in the "Link Code Line" of the Effects tab in NextGen Gallery Options
+* b) Remove the default additional HTML markup added in the "Link Code Line" of the Effects tab in NextGen Gallery Options
 
 That way, the standard defined effect won't fire when Photoswipe is used. Please don't change the markup, or two viewers may fire at the same time.
 
@@ -83,6 +80,10 @@ No, sorry. But you can edit the ngg-photoswipe.js file to achieve what you want.
 3. Result 
 
 == Changelog ==
+
+= 1.0.1 =
+
+Minor bugfix. Now Photoswipe icons show correctly.
 
 = 1.0 =
 
