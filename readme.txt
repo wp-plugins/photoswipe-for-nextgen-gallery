@@ -3,7 +3,7 @@ Contributors: gsenas
 Tags: Photoswipe, NGGallery, mobile, ipad, iphone, android, slideshow, media gallery, NextGEN gallery
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 1.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,10 @@ No, sorry. But you can edit the ngg-photoswipe.js file to achieve what you want.
 3. Result 
 
 == Changelog ==
+
+= 1.0.2 =
+
+Wrestling with readme.txt format. Sorry.
 
 = 1.0.1 =
 
