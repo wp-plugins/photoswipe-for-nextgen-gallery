@@ -3,7 +3,7 @@
    Plugin Name: Photoswipe for NextGEN Gallery
    Plugin URI: http://adriza.net
    Description: Automatically use Photoswipe to navigate NextGEN galleries when using a mobile browser
-   Version: 1.0
+   Version: 1.1
    Author: Guillermo Señas
    Author URI: http://adriza.net
    License: GPL2
@@ -33,6 +33,12 @@ $isMobile=(preg_match('/(alcatel|amoi|android|avantgo|blackberry|benq|cell|crick
 		wp_enqueue_script('code.photoswipe.jquery-3.0.5', plugins_url('photoswipe-for-nextgen-gallery/lib/photoswipe/code.photoswipe.jquery-3.0.5.min.js', dirname(__FILE__)),array( 'jquery' ));
 		wp_enqueue_script('ngg-photoswipe.js',  plugins_url('photoswipe-for-nextgen-gallery/js/ngg-photoswipe.js', dirname(__FILE__)),array( 'jquery' ));
 		wp_enqueue_style( 'photoswipe_css',  plugins_url('photoswipe-for-nextgen-gallery/lib/photoswipe/photoswipe.css', dirname(__FILE__)));
+		
+		//Add scripts to disable additional viewers:
+		$options = get_option( 'additional_viewers' );
+		if (1 == $options['fancybox']) {
+			wp_enqueue_script('ngg-photoswipe.js',  plugins_url('photoswipe-for-nextgen-gallery/js/ngg-photoswipe-disable-fancybox.js', dirname(__FILE__)),array( 'jquery' ));
+		}
 	}
 }
 
@@ -48,10 +54,12 @@ function nggphotoswipe_menu() {
 
 function nggphotoswipe_options_set() {
 	add_option("nggphotoswipe_enabled","mobile");
+	add_option("additional_viewers","none");
 }
 
 function nggphotoswipe_options_unset() {
 	delete_option("nggphotoswipe_enabled");
+	delete_option("additional_viewers");
 }
 
 function nggphotoswipe_options_page() {
@@ -62,6 +70,8 @@ function nggphotoswipe_options_page() {
 	if ($_REQUEST['nggphotoswipe_enabled']) {
 		update_option('nggphotoswipe_enabled',$_REQUEST['nggphotoswipe_enabled']);
 	}
+	
+	update_option('additional_viewers',$_REQUEST['additional_viewers']);	
 	?>
 <div class="wrap">
 <h2>Photoswipe for NextGEN Gallery</h2>
@@ -76,9 +86,24 @@ function nggphotoswipe_options_page() {
 		<input type="radio" name="nggphotoswipe_enabled" value="never" <?php checked( get_option('nggphotoswipe_enabled'), "never", 1 ); ?>> Never replace the viewer<br/>
 		</td>
         </tr>
+		<?php $options = get_option( 'additional_viewers' );  ?>
+        <th scope="row">Disable other viewers</th>
+        <td>
+		<input type="checkbox" name="additional_viewers[fancybox]" value="1" <?php checked( $options['fancybox'], 1 ); ?>> Disable Fancybox<br/>
+		</td>
+        </tr>		
     </table>
     
     <?php submit_button(); ?>
 </form>
 </div>	
+<hr/>
+<p>If this plugin saved your life, or if you consider it helpful, please donate at least <b>ten cents (0,10 €)</b> to the author</p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif" width="1" height="1">
+</form>
 <?php } ?>

@@ -1,13 +1,14 @@
 === Photoswipe for NextGEN Gallery ===
 Contributors: gsenas
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8HNE3583KAVEQ&lc=US&item_name=Guillermo%20Senas&amount=0%2e10&currency_code=EUR&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: Photoswipe, NGGallery, mobile, ipad, iphone, android, slideshow, media gallery, NextGEN gallery
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 1.0.2
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Automatically use Photoswipe to navigate NextGEN galleries when using a mobile browser
+Automatically use Photoswipe to navigate NextGEN galleries when using a mobile browser.
 
 == Description ==
 
@@ -17,6 +18,8 @@ Now you can use Photoswipe, the best mobile image browser, just installing this 
 After activation you'll find a new Photoswipe submenu in the NextGEN Gallery menu, allowing you to configure how the plugin works.
 
 Please note, I am not the developer, or related in any way with of the authors of [Photoswipe](http://www.photoswipe.com/ "Photoswipe webpage") or [NextGEN Gallery](http://wordpress.org/extend/plugins/nextgen-gallery/). This plugin is only intended to make Photoswipe integration with NextGEN Gallery dead simple.
+
+If you find this plugin helpful, consider [donating](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8HNE3583KAVEQ&lc=US&item_name=Guillermo%20Senas&amount=0%2e10&currency_code=EUR&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted "Donate link"), at least ten cents.
 
 = Options =
 
@@ -30,6 +33,10 @@ Useful for testing.
 
 * *Never replace the viewer:*
 Disables the plugin. Much like deactivating the plugin.
+
+* *Disable additional viewers:*
+In this section you can disable other supported image viewers, other than the NextGEN Gallery default ones.
+Currently only Fancybox.
 
 == Installation ==
 STEP 0: Make sure you have the [NextGEN Gallery](http://wordpress.org/extend/plugins/nextgen-gallery/) plugin already installed and activated!
@@ -73,6 +80,11 @@ Yes, the description will show behind the title, if the image has one.
 
 No, sorry. But you can edit the ngg-photoswipe.js file to achieve what you want.
 
+= When will be my favorite viewer also adapted to use Photoswipe when using a mobile browser? =
+
+When it's done.
+
+
 == Screenshots ==
 
 1. Plugin options - Choose when Photoswipe should be applied.
@@ -80,6 +92,10 @@ No, sorry. But you can edit the ngg-photoswipe.js file to achieve what you want.
 3. Result 
 
 == Changelog ==
+
+= 1.1 =
+
+Option to disable more gallery viewers. Starting with Fancybox.
 
 = 1.0.2 =
 
