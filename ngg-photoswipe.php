@@ -37,7 +37,7 @@ $isMobile=(preg_match('/(alcatel|amoi|android|avantgo|blackberry|benq|cell|crick
 		//Add scripts to disable additional viewers:
 		$options = get_option( 'additional_viewers' );
 		if (1 == $options['fancybox']) {
-			wp_enqueue_script('ngg-photoswipe.js',  plugins_url('photoswipe-for-nextgen-gallery/js/ngg-photoswipe-disable-fancybox.js', dirname(__FILE__)),array( 'jquery' ));
+			wp_enqueue_script('ngg-photoswipe-disable-fancybox.js',  plugins_url('photoswipe-for-nextgen-gallery/js/ngg-photoswipe-disable-fancybox.js', dirname(__FILE__)),array( 'jquery' ));
 		}
 	}
 }

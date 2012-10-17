@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8HNE3
 Tags: Photoswipe, NGGallery, mobile, ipad, iphone, android, slideshow, media gallery, NextGEN gallery
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 1.1
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
