@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8HNE3
 Tags: Photoswipe, NGGallery, mobile, ipad, iphone, android, slideshow, media gallery, NextGEN gallery
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -73,6 +73,10 @@ That way, the standard defined effect won't fire when Photoswipe is used. Please
 
 If you absolutely need to change the "Link Code Line", change the ngg-photoswipe.js to remove the specific markup you add.
  
+= Can I use WPTouch with this plugin? =
+
+No, sorry, this plugin DOES NOT WORK WITH WPTOUCH.
+
 = Will the image descriptions show? =
 
 Yes, the description will show behind the title, if the image has one.
@@ -93,6 +97,14 @@ When it's done.
 3. Result 
 
 == Changelog ==
+
+= 1.2 =
+
+Major bugfixing:
+
+* Works on Wordpress 3.0, as stated in the readme
+* Javascript errors fixed when showing pages with no galleries
+* Photoswipe CSS & JS files no longer load on admin pages, preventing many related issues 
 
 = 1.1 =
 

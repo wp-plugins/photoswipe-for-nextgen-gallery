@@ -1,18 +1,20 @@
 //Ready for photoSwipe!
 jQuery(function(){
-	jQuery(".ngg-gallery-thumbnail a").photoSwipe({
+	if (jQuery(".ngg-gallery-thumbnail a").length > 0) {
+		jQuery(".ngg-gallery-thumbnail a").photoSwipe({
 			captionAndToolbarAutoHideDelay: 0,
 			getImageCaption: function(el){
-				psTitle=jQuery(el).find("img").first().attr("alt");
-				psDescription=jQuery(el).attr("title");
-				psCaptionString="<strong>"+psTitle+"</strong>";
-	  			if (psDescription.length > 1) {
-					psCaptionString=psCaptionString+'<div class="ps-long-description"><small>'+psDescription+'</small></div>';
-				}					
+				psTitle = jQuery(el).find("img").first().attr("alt");
+				psDescription = jQuery(el).attr("title");
+				psCaptionString = "<strong>" + psTitle + "</strong>";
+				if (psDescription.length > 1) {
+					psCaptionString = psCaptionString + '<div class="ps-long-description"><small>' + psDescription + '</small></div>';
+				}
 				psImgCaption = jQuery(psCaptionString);
 				return psImgCaption;
-			}			
-		});	
+			}
+		});
+	}
 });
 
 jQuery(document).ready(function(){
