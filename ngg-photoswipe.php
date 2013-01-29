@@ -3,7 +3,7 @@
    Plugin Name: Photoswipe for NextGEN Gallery
    Plugin URI: http://adriza.net
    Description: Automatically use Photoswipe to navigate NextGEN galleries when using a mobile browser
-   Version: 1.2
+   Version: 1.2.1
    Author: Guillermo Señas
    Author URI: http://adriza.net
    License: GPL2

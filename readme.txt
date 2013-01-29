@@ -4,12 +4,11 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=8HNE3
 Tags: Photoswipe, NGGallery, mobile, ipad, iphone, android, slideshow, media gallery, NextGEN gallery
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 1.2
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-NextGEN Gallery navigations adapted for iPhone, Android and Blackberry. Interface inspired by the iOS photo viewer/Google Images mobile.
-Automatically use Photoswipe to navigate NextGEN galleries when using a mobile browser: pinch to zoom, swipe to navigate, auto-rotate. 
+NextGEN Gallery navigations adapted for iPhone, Android and Blackberry: pinch to zoom, swipe to navigate, auto-rotate. 
 
 == Description ==
 
@@ -97,6 +96,10 @@ When it's done.
 3. Result 
 
 == Changelog ==
+
+= 1.2.1 =
+
+Description fixed
 
 = 1.2 =
 
